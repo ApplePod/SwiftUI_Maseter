@@ -11,6 +11,11 @@ struct OnboardingViews: View {
     
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
     
+    @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
+    @State private var buttonOffset: CGFloat = 0
+    @State private var isAnimating: Bool = false
+    
+    
     var body: some View {
         ZStack {
             
@@ -32,7 +37,10 @@ struct OnboardingViews: View {
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 10)
-                }
+                } //: HEADER
+                .opacity(isAnimating ? 1 : 0)
+                .offset(y: isAnimating ? 0 : -40)
+                .animation(.easeOut(duration: 1), value: isAnimating)
                 
                 // MARK: - CENTER
                 ZStack {
@@ -42,6 +50,8 @@ struct OnboardingViews: View {
                         Image("character-1")
                             .resizable()
                             .scaledToFit()
+                            .opacity(isAnimating ? 1 : 0)
+                            .animation(.easeOut(duration: 0.5), value: isAnimating)
         
                    
                     
@@ -58,20 +68,22 @@ struct OnboardingViews: View {
                         .fill(Color.white.opacity(0.2))
                         .padding(8)
                     
-                    HStack {
-                        Capsule()
-                            .fill(Color("ColorRed"))
-                            .frame(width: 80)
-                    
-                        Spacer()
-                        
-                    }
                     
                     Text("Get Started")
                         .font(.system(.title3, design: .rounded))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .offset(x: 20)
+                    
+                    HStack {
+                        Capsule()
+                            .fill(Color("ColorRed"))
+                            .frame(width: buttonOffset + 80)
+                    
+                        Spacer()
+                        
+                    }
+
                     
                     HStack {
                         ZStack {
@@ -89,17 +101,39 @@ struct OnboardingViews: View {
                         }
                         .foregroundColor(.white)
                         .frame(width: 80, height: 80, alignment: .center)
-                        .onTapGesture {
-                            isOnboardingViewActive = false
-                        }
+                        .offset(x: buttonOffset)
+                        .gesture(
+                            DragGesture()
+                                .onChanged { gesture in
+                                    if gesture.translation.width > 0  && buttonOffset <= buttonWidth - 80 {
+                                        buttonOffset = gesture.translation.width
+                                    }
+                                }
+                                .onEnded { _ in
+                                    withAnimation(Animation.easeOut(duration: 1)) {
+                                        if buttonOffset > buttonWidth / 2 {
+                                            buttonOffset = buttonWidth - 80
+                                            isOnboardingViewActive = false
+                                        } else {
+                                            buttonOffset = 0
+                                        }
+                                    }
+                                }
+                        ) //: DragGesture
                     
                         Spacer()
                     }//: HSTACK
                 }//: FOOTER
-                .frame(height: 80, alignment: .center)
+                .frame(width: buttonWidth, height: 80, alignment: .center)
                 .padding()
+                .opacity(isAnimating ? 1 : 0)
+                .offset(y: isAnimating ? 0 : -40)
+                .animation(.easeOut(duration: 1), value: isAnimating)
             } //: VSTACK
         } //: ZSTACK
+        .onAppear {
+            isAnimating = true
+        }
     }
 }
 
