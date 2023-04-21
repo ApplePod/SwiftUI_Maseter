@@ -16,6 +16,7 @@
 		CA6EA88829F279830006AF6D /* OnboardingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6EA88729F279830006AF6D /* OnboardingViews.swift */; };
 		CA6EA88A29F279910006AF6D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6EA88929F279910006AF6D /* HomeView.swift */; };
 		CAF3B85829F2968500D5495B /* CircleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3B85729F2968500D5495B /* CircleGroupView.swift */; };
+		CAF3B85A29F2C28700D5495B /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3B85929F2C28700D5495B /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CA6EA88729F279830006AF6D /* OnboardingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViews.swift; sourceTree = "<group>"; };
 		CA6EA88929F279910006AF6D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CAF3B85729F2968500D5495B /* CircleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGroupView.swift; sourceTree = "<group>"; };
+		CAF3B85929F2C28700D5495B /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		CA6EA88529F276990006AF6D /* Utilites */ = {
 			isa = PBXGroup;
 			children = (
+				CAF3B85929F2C28700D5495B /* AudioPlayer.swift */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAF3B85829F2968500D5495B /* CircleGroupView.swift in Sources */,
+				CAF3B85A29F2C28700D5495B /* AudioPlayer.swift in Sources */,
 				CA6EA87329F2749E0006AF6D /* ContentView.swift in Sources */,
 				CA6EA88A29F279910006AF6D /* HomeView.swift in Sources */,
 				CA6EA88829F279830006AF6D /* OnboardingViews.swift in Sources */,
