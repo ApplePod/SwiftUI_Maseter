@@ -18,10 +18,15 @@ struct HomeView: View {
             
             Spacer()
             
-            Image("character-2")
-                .resizable()
-                .scaledToFit()
+            ZStack {
+                
+                CircleGroupView(ShapeColor: .gray, ShapeOpacity: 0.1)
+                
+                Image("character-2")
+                    .resizable()
+                    .scaledToFit()
                 .padding()
+            }
             
             // MARK: - CENTER
             
@@ -46,9 +51,11 @@ struct HomeView: View {
                 Text("Restart")
                     .font(.system(.title3, design: .rounded))
                     .fontWeight(.bold)
-            }
-
-        }
+            } //: BUTTON
+            .buttonStyle(.borderedProminent)
+            .buttonBorderShape(.capsule)
+            .controlSize(.large)
+        } //: VSTACK
     }
 }
 
