@@ -11,6 +11,7 @@
 		CA93BE4A29F3861E00FC3178 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA93BE4929F3861E00FC3178 /* ContentView.swift */; };
 		CA93BE4C29F3861F00FC3178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA93BE4B29F3861F00FC3178 /* Assets.xcassets */; };
 		CA93BE4F29F3861F00FC3178 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA93BE4E29F3861F00FC3178 /* Preview Assets.xcassets */; };
+		CA93BE5B29F3951B00FC3178 /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA93BE5A29F3951B00FC3178 /* InfoPanelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CA93BE4929F3861E00FC3178 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA93BE4B29F3861F00FC3178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA93BE4E29F3861F00FC3178 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CA93BE5A29F3951B00FC3178 /* InfoPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +53,10 @@
 		CA93BE4629F3861E00FC3178 /* Pinch */ = {
 			isa = PBXGroup;
 			children = (
+				CA93BE4729F3861E00FC3178 /* PinchApp.swift */,
 				CA93BE5829F3890500FC3178 /* Model */,
 				CA93BE5729F388E200FC3178 /* Data */,
 				CA93BE5629F388D300FC3178 /* View */,
-				CA93BE4729F3861E00FC3178 /* PinchApp.swift */,
 				CA93BE5529F388C300FC3178 /* Screen */,
 				CA93BE4B29F3861F00FC3178 /* Assets.xcassets */,
 				CA93BE4D29F3861F00FC3178 /* Preview Content */,
@@ -81,6 +83,7 @@
 		CA93BE5629F388D300FC3178 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CA93BE5A29F3951B00FC3178 /* InfoPanelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			files = (
 				CA93BE4A29F3861E00FC3178 /* ContentView.swift in Sources */,
 				CA93BE4829F3861E00FC3178 /* PinchApp.swift in Sources */,
+				CA93BE5B29F3951B00FC3178 /* InfoPanelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
